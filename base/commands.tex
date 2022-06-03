@@ -1,33 +1,26 @@
-\hypersetup{
-  colorlinks = true,
-  citecolor = blue,
-  urlcolor = black,
-  linkbordercolor = {1 0 0}
-}
+% Sources:
+% https://www.overleaf.com/learn/latex/Commands
+% https://www.overleaf.com/learn/latex/Operators
+% https://www.overleaf.com/learn/latex/Brackets_and_Parentheses
 
-% Entornos convenientes
-\newenvironment{statement}[1]{\smallskip\noindent\color[rgb]{1.00, 0.00, 0.50}{\textbf{#1.}}}{}
-\allowdisplaybreaks[1]
-\newenvironment{solution}{\begin{proof}[Soluci\'on]}{\end{proof}}
+% Operators in Roman font
+% Use * if your operator uses subscripts
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Img}{Im}  % image
+\DeclareMathOperator{\Ker}{Ker}  % kernel
+\DeclareMathOperator{\rank}{rank}  % rank
+\DeclareMathOperator{\Tr}{Tr}  % trace
+\DeclareMathOperator{\pr}{pr}  % projection
+\DeclareMathOperator{\dom}{dom}  % domain
+\DeclareMathOperator{\ran}{ran}  % range
+\DeclareMathOperator*{\lcm}{lcm}
+\DeclareMathOperator*{\argmin}{arg min}
+\DeclareMathOperator*{\argmax}{arg max}
 
-% Comandos para teoremas, definiciones, ejemplos, lemas, etc. para sus respectivos body types.
-\renewcommand*{\proofname}{Prueba}
-\renewcommand{\contentsname}{Contenido}
-\newtheorem{theorem}{Teorema}
-\newtheorem*{proposition}{Proposici\'on}
-\newtheorem{lemma}[theorem]{Lema}
-\newtheorem{corollary}[theorem]{Corolario}
-\newtheorem{conjecture}[theorem]{Conjetura}
-\newtheorem*{postulate}{Postulado}
-\theoremstyle{definition}
-\newtheorem{defn}[theorem]{Definici\'on}
-\newtheorem{example}[theorem]{Ejemplo}
-\theoremstyle{remark}
-\newtheorem*{remark}{Observaci\'on}
-\newtheorem*{notation}{Notaci\'on}
-\newtheorem*{note}{Nota}
+% References specified mail
+\newcommand{\mailto}[1]{\href{mailto:#1}{\texttt{#1}}}
 
-% Comandos para tipear r\'apido
 \newcommand{\BC}{\mathbb{C}}
 \newcommand{\BE}{\mathbb{E}}
 \newcommand{\BF}{\mathbb{F}}
@@ -46,11 +39,35 @@
 \newcommand{\CP}{\mathcal{P}}
 \newcommand{\CU}{\mathcal{U}}
 
-\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
-\newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
-\newcommand{\mailto}[1]{\href{mailto:#1}{\texttt{#1}}}
+% Geometry commands
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\dang}{\measuredangle}  % Directed angle
+\newcommand{\ray}[1]{\overrightarrow{#1}}
+\newcommand{\seg}[1]{\overline{#1}}
+\newcommand{\arc}[1]{\wideparen{#1}}
+
+% Logical connectives
+\newcommand{\liff}{\leftrightarrow}
+\newcommand{\lthen}{\rightarrow}
+
+% Line, tilde and hat
 \newcommand{\ol}{\overline}
 \newcommand{\ul}{\underline}
 \newcommand{\wt}{\widetilde}
 \newcommand{\wh}{\widehat}
+
+% Floor and ceiling
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
+
+% Diff
+\newcommand{\fpartial}[2]{\frac{\partial #1}{\partial #2}}
+
+% Time savers
+\newcommand{\parentheses}[1]{\left( #1 \right)}
+\newcommand{\brackets}[1]{\left[ #1 \right]}
+\newcommand{\braces}[1]{\left\{ #1 \right\}}
 \newcommand{\eps}{\varepsilon}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\inv}{^{-1}}
